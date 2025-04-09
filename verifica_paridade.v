@@ -3,6 +3,8 @@ module verifica_paridade (
   output erro
 );
 
-// implemente o seu código aqui
+  // Calcula a paridade dos 8 bits de dados e compara com o bit de paridade
+  assign erro = dado[8] ^ (dado[0] ^ dado[1] ^ dado[2] ^ dado[3] ^ 
+                           dado[4] ^ dado[5] ^ dado[6] ^ dado[7]);
 
 endmodule
